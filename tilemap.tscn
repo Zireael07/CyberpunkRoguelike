@@ -1,10 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/centerline.png" type="Texture" id=1]
 [ext_resource path="res://assets/road.png" type="Texture" id=2]
-[ext_resource path="res://player.tscn" type="PackedScene" id=3]
-
-
+[ext_resource path="res://TileMap.gd" type="Script" id=3]
+[ext_resource path="res://player.tscn" type="PackedScene" id=4]
 
 [sub_resource type="TileSet" id=1]
 
@@ -37,6 +36,7 @@
 tile_set = SubResource( 1 )
 format = 1
 tile_data = PoolIntArray( 0, 1, 0, 1, 0, 0, 2, 1, 0, 3, 1, 0, 65536, 1, 0, 65537, 0, 0, 65538, 1, 0, 65539, 1, 0, 131072, 1, 0, 131073, 0, 0, 131074, 1, 0, 131075, 1, 0, 196608, 1, 0, 196609, 0, 0, 196610, 1, 0, 196611, 1, 0 )
+script = ExtResource( 3 )
 
-[node name="player" parent="TileMap" instance=ExtResource( 3 )]
+[node name="player" parent="TileMap" instance=ExtResource( 4 )]
 

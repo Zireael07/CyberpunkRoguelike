@@ -67,5 +67,8 @@ func _input(event):
 		# makes the move happen!
 		var res = update_position(get_position(), direction)
 		
-		set_position(res[0])
+		# Check if unblocked
+		var blocker = grid.is_cell_blocked(res[1])
+		if not blocker:
+			set_position(res[0])
 		emit_signal("player_acted")
