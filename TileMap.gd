@@ -14,7 +14,7 @@ func _ready():
 
 # Return TRUE if cell is a floor on the map
 func is_walkable( cell ):
-	var walk = [0,1]
+	var walk = [0,1,3]
 	return walk.has(get_cellv( cell ))
 	
 # Return False if cell is an unblocked floor
