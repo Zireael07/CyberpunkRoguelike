@@ -12,6 +12,13 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func get_entities_in_cell(cell):
+	var list = []
+	for obj in get_tree().get_nodes_in_group('entity'):
+		if obj.get_map_position() == cell:
+			list.append(obj)
+	return list
+
 # Return TRUE if cell is a floor on the map
 func is_walkable( cell ):
 	var walk = [0,1,3]
@@ -21,5 +28,9 @@ func is_walkable( cell ):
 # Return Object if cell has a blocking Object
 func is_cell_blocked(cell):
 	var blocks = not is_walkable(cell)
+	var entities = get_entities_in_cell(cell)
+	for e in entities:
+		if e.block_move:
+			blocks = e
 
 	return blocks

@@ -71,4 +71,9 @@ func _input(event):
 		var blocker = grid.is_cell_blocked(res[1])
 		if not blocker:
 			set_position(res[0])
+			# detect when we bump something
+		else:
+			if typeof(blocker) == TYPE_OBJECT:
+				print("Blocked")
+			
 		emit_signal("player_acted")
