@@ -19,10 +19,12 @@ const DIRECTIONS = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	connect("player_moved", get_parent(), '_on_player_pos_changed')
-#	connect("player_acted", get_parent(), '_on_player_acted')
+	connect("player_moved", get_parent(), '_on_player_pos_changed')
+	connect("player_acted", get_parent(), '_on_player_acted')
 	
 	set_z_index(2)
+	
+	RPG.player = self
 
 
 func set_map_position(pos):

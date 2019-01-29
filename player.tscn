@@ -3,8 +3,12 @@
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://assets/AgentBase.png" type="Texture" id=2]
 
-[node name="player" type="Node2D"]
+[node name="player" type="Node2D" groups=[
+"entity",
+]]
+editor/display_folded = true
 script = ExtResource( 1 )
+block_move = true
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
