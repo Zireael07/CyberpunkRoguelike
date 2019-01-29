@@ -19,6 +19,11 @@ config/name="Cyberpunk Roguelike - beta"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+RPG="*res://RPG.gd"
+Astar_map="*res://Astar_map.gd"
+
 [input]
 
 move_right={
