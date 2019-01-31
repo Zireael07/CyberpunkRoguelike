@@ -13,12 +13,18 @@ var dead : bool = false
 
 # components
 var ai
+var fighter
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	grid = get_tree().get_nodes_in_group("map")[0]
 	tile_size = grid.get_cell_size()
 	#pass # Replace with function body.
+
+func kill():
+	queue_free()
+	
+	dead = true
 
 func get_map_position():
 	var grid_pos = grid.world_to_map(get_position())
@@ -87,7 +93,9 @@ func step_to(cell):
 		# detect when we bump something
 		else:
 			if typeof(blocker) == TYPE_OBJECT:
-				print("AI bumps")
+				if blocker.fighter:
+					fighter.fight(blocker)
+				#print("AI bumps")
 		
 		# since we use Astar, we don't have to check if the cell is blocked or not
 		#set_position(res[0]+Vector2(0,-8))

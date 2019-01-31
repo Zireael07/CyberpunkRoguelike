@@ -76,6 +76,8 @@ func _input(event):
 			# detect when we bump something
 		else:
 			if typeof(blocker) == TYPE_OBJECT:
-				print("Blocked")
+				#print("Blocked")
+				if blocker.fighter:
+					fighter.fight(blocker)
 			
 		emit_signal("player_acted")
