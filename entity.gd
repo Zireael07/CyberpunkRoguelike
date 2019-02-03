@@ -22,9 +22,13 @@ func _ready():
 	#pass # Replace with function body.
 
 func kill():
+	broadcast_kill()
 	queue_free()
 	
 	dead = true
+
+func broadcast_kill():
+	RPG.broadcast(self.name + " is killed!", RPG.COLOR_LIGHT_GREY)
 
 func get_map_position():
 	var grid_pos = grid.world_to_map(get_position())
