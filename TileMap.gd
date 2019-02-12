@@ -33,7 +33,17 @@ func get_entities_in_cell(cell):
 	for obj in get_tree().get_nodes_in_group('entity'):
 		if obj.get_map_position() == cell:
 			list.append(obj)
+	
 	return list
+	
+func get_entities_in_cell_readable(cell):
+#	print("cell: " + str(cell))
+	var ret = []
+	var list = get_entities_in_cell(cell)
+	for obj in list:
+		ret.append(obj.get_name())
+		
+	return ret
 
 # Return TRUE if cell is a floor on the map
 func is_walkable(cell: Vector2):

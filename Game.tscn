@@ -19,7 +19,7 @@ margin_bottom = 604.0
 rect_min_size = Vector2( 0, 300 )
 
 [node name="PlayerInfo" parent="frame/left" instance=ExtResource( 2 )]
-margin_bottom = 28.0
+margin_bottom = 90.0
 
 [node name="right" type="VBoxContainer" parent="frame"]
 margin_left = 304.0
@@ -55,3 +55,6 @@ rect_min_size = Vector2( 0, 150 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[connection signal="gui_input" from="frame/right/map/ViewportContainer" to="frame/right/map/ViewportContainer/Viewport/Node2D" method="_on_Viewport_gui_input"]
+[connection signal="mouse_exited" from="frame/right/map/ViewportContainer" to="frame/right/map/ViewportContainer/Viewport/Node2D" method="_on_Viewport_mouse_exited"]
+[connection signal="cell_hover" from="frame/right/map/ViewportContainer/Viewport/Node2D" to="frame/left/PlayerInfo" method="_on_Node2D_cell_hover"]
