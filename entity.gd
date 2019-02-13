@@ -15,6 +15,9 @@ var dead : bool = false
 var ai
 var fighter
 
+# for gfx effects
+var splash_base = preload("res://splash.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	grid = get_tree().get_nodes_in_group("map")[0]
@@ -103,3 +106,15 @@ func step_to(cell):
 		
 		# since we use Astar, we don't have to check if the cell is blocked or not
 		#set_position(res[0]+Vector2(0,-8))
+		
+func add_splash(type: int=0,dmg=null):
+	var splash = splash_base.instance()
+	
+	# offset
+	splash.set_position(Vector2(0,16))
+	
+	# set values
+	splash.type = type
+	if dmg:
+		splash.dmg = dmg
+	add_child(splash)

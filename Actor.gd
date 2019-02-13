@@ -50,7 +50,9 @@ func fight(who):
 		return
 		
 	RPG.broadcast(ownr.name + " hits " + who.name + "!", RPG.COLOR_LIGHT_BLUE)
-	who.fighter.take_damage(ownr, RPG.roll(1,4))	
+	var dmg = RPG.roll(1,4)
+	who.fighter.take_damage(ownr, dmg)
+	who.add_splash(0, dmg) 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

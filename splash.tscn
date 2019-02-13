@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://splash.gd" type="Script" id=1]
+[ext_resource path="res://assets/splash_gray.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="dmg_label" type="Label" parent="."]
+margin_left = 12.0
+margin_top = 4.0
+margin_right = 52.0
+margin_bottom = 35.0
+text = "0"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
