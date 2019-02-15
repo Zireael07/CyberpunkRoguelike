@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://TileMap.gd" type="Script" id=2]
 [ext_resource path="res://player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entity.tscn" type="PackedScene" id=4]
+[ext_resource path="res://item_scene.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,4 +28,7 @@ scale = Vector2( 0.25, 0.25 )
 position = Vector2( 144, 16 )
 scale = Vector2( 0.25, 0.25 )
 block_move = true
+
+[node name="item" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 80, 16 )
 
