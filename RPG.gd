@@ -3,6 +3,7 @@ extends Node
 # Declare member variables here. Examples:
 var player
 var game
+var map
 
 # colors for message panel
 const COLOR_WHITE = '#ffffff' #deeed6'

@@ -6,11 +6,10 @@ extends TileMap
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	RPG.map = self
 	# Astar representation
 	Astar_map.build_map(Vector2(get_used_rect().end.x, get_used_rect().end.y), get_floor_cells())
 	
-	
-	#pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

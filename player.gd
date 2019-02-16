@@ -81,3 +81,11 @@ func _input(event):
 					fighter.fight(blocker)
 			
 		emit_signal("player_acted")
+		
+	# other actions
+	if Input.is_action_just_pressed("act_pickup"):
+		var items = []
+		for ob in RPG.map.get_entities_in_cell(get_map_position()):
+			if ob.item:
+				#print("Item at our position")
+				ob.item.pickup(self)
