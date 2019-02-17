@@ -22,7 +22,7 @@ func pickup(entity):
 	
 	
 	RPG.broadcast(entity.get_name() + " picks up " + ownr.get_name())
-#	entity.container.add_to_inventory(ownr)
+	entity.container.add_to_inventory(ownr)
 
 #	if entity == RPG.player:
 #		RPG.inventory.add_to_inventory(ownr)
@@ -34,7 +34,7 @@ func drop(entity):
 	ownr.set_visible(true)
 	ownr.set_map_position(entity.get_map_position())
 	
-#	entity.container.remove_from_inventory(ownr)
+	entity.container.remove_from_inventory(ownr)
 	
 #	if entity == RPG.player:
 #		assert inventory_slot != null

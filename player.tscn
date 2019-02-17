@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://assets/AgentBase.png" type="Texture" id=2]
 [ext_resource path="res://Actor.gd" type="Script" id=3]
+[ext_resource path="res://container.gd" type="Script" id=4]
 
 [node name="player" type="Node2D" groups=[
 "entity",
@@ -19,4 +20,7 @@ current = true
 
 [node name="Actor" type="Node" parent="."]
 script = ExtResource( 3 )
+
+[node name="container" type="Node" parent="."]
+script = ExtResource( 4 )
 

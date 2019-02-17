@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entity.gd" type="Script" id=1]
 [ext_resource path="res://assets/CharacterBase.png" type="Texture" id=2]
 [ext_resource path="res://AI.gd" type="Script" id=3]
 [ext_resource path="res://Actor.gd" type="Script" id=4]
+[ext_resource path="res://container.gd" type="Script" id=5]
 
 [node name="entity" type="Node2D"]
 script = ExtResource( 1 )
@@ -17,4 +18,7 @@ script = ExtResource( 3 )
 
 [node name="Actor" type="Node" parent="."]
 script = ExtResource( 4 )
+
+[node name="container" type="Node" parent="."]
+script = ExtResource( 5 )
 

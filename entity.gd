@@ -15,6 +15,7 @@ var dead : bool = false
 var ai
 var fighter
 var item
+var container
 
 # for gfx effects
 var splash_base = preload("res://splash.tscn")
