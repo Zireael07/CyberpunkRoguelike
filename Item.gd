@@ -24,8 +24,8 @@ func pickup(entity):
 	RPG.broadcast(entity.get_name() + " picks up " + ownr.get_name())
 	entity.container.add_to_inventory(ownr)
 
-#	if entity == RPG.player:
-#		RPG.inventory.add_to_inventory(ownr)
+	if entity == RPG.player:
+		RPG.inventory.add_to_inventory(ownr)
 
 func drop(entity):
 	RPG.broadcast(entity.get_name() + " drops " + ownr.get_name())

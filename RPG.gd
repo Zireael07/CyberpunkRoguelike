@@ -4,6 +4,7 @@ extends Node
 var player
 var game
 var map
+var inventory
 
 # colors for message panel
 const COLOR_WHITE = '#ffffff' #deeed6'

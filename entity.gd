@@ -108,6 +108,11 @@ func step_to(cell):
 		
 		# since we use Astar, we don't have to check if the cell is blocked or not
 		#set_position(res[0]+Vector2(0,-8))
+
+# Get our Icon texture for inventory GUI
+func get_icon():
+	return get_node('Sprite').get_texture()
+
 		
 func add_splash(type: int=0,dmg=null):
 	var splash = splash_base.instance()
