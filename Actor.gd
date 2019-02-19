@@ -7,6 +7,8 @@ signal hp_changed(current,full)
 export(int) var max_hp = 10 setget _set_max_hp
 var hp = 10 setget _set_hp
 
+var damage = [1,6]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ownr.fighter = self
@@ -50,7 +52,7 @@ func fight(who):
 		return
 		
 	RPG.broadcast(ownr.name + " hits " + who.name + "!", RPG.COLOR_LIGHT_BLUE)
-	var dmg = RPG.roll(1,4)
+	var dmg = RPG.roll(damage[0], damage[1])
 	who.fighter.take_damage(ownr, dmg)
 	who.add_splash(0, dmg) 
 

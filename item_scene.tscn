@@ -17,4 +17,6 @@ offset = Vector2( 16, 16 )
 
 [node name="Item" type="Node" parent="."]
 script = ExtResource( 3 )
+equippable = true
+equip_slot = "MAIN_HAND"
 
