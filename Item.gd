@@ -10,8 +10,11 @@ export(bool) var equippable
 var equipped = false
 export(String) var equip_slot = ''
 
+# Pool*Arrays aren't saved properly when exported in 3.1
+#export(PoolIntArray) var damage = [1,6]
 
-export(PoolIntArray) var damage = [1,6]
+export(Array) var damage = [1,6]
+
 
 var inventory_slot
 

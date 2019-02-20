@@ -19,4 +19,5 @@ offset = Vector2( 16, 16 )
 script = ExtResource( 3 )
 equippable = true
 equip_slot = "MAIN_HAND"
+damage = [ 1, 8 ]
 
